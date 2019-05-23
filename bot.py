@@ -6,7 +6,6 @@ import translate as translate
 import currency as currency
 import reaction as reactspam
 import delete as delete
-import ipgrabber as ipgrabber
 import picturescan as picturescan
 import scanprofile as scanprofile
 from secret_keys import *
