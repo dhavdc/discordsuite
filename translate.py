@@ -11,8 +11,14 @@ translatorGoogle = Translator()
 async def translate(message):
     if ("?translate" in message.content and message.author.id in WHITELIST):
         if "google" in message.content:
+                
             strippedmessage = message.content.replace('?translate', '')
             strippedmessage = strippedmessage.replace('google', '')
+            if "portugese" in message.content:
+                strippedmessage = strippedmessage.replace('portugese', '')
+                translatedmessage = translatorGoogle.translate(strippedmessage, dest='pt')
+                await message.channel.send(translatedmessage.text)
+                return
             translatedmessage = translatorGoogle.translate(strippedmessage, dest='en')
             if translatedmessage.src == "ru":
                 await message.channel.send(translatedmessage.text)
