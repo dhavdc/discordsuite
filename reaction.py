@@ -17,4 +17,3 @@ async def reaction(message, channel, client):
             print(type('\U0001F3D3'))
             async for messages in channel.history(limit=int(LIMIT[0])):
                 await messages.add_reaction(emoji.strip().upper().replace("\\", ""))
-   

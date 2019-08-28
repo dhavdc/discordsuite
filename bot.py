@@ -17,7 +17,7 @@ print("\nPlease follow this link to retrieve your token: https://github.com/TheR
 print("\nYou might have to refresh to see the token section show up - also you can do this in the desktop app, no need for browser")
 SERVER_NAME = None
 SERVER_OBJECT = None
-TOKENDHAV = 'ENTER TOKEN HERE'
+TOKENDHAV = "MjQ5NzMwNzAxOTE2NzY2MjA4.XQrmnQ.uNY3hEp9wKryRVVYRQ9aCsyk7pU"
 client = discord.Client()
 
 @client.event
@@ -38,4 +38,4 @@ async def on_message(message):
         await picturescan.picturescan(message, message.channel)
     if "?scanprofile" in message.content:
         await scanprofile.scanprofile(message, client)
-client.run(TOKEN,bot=False)
+client.run(TOKEN, bot=False)
